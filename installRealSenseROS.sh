@@ -10,7 +10,7 @@
 # Save the directory we're installing from:
 INSTALL_DIR=$PWD
 # Now go get ready to install librealsense
-source /opt/ros/kinetic/setup.bash
+source /opt/ros/melodic/setup.bash
 DEFAULTDIR=catkin_ws
 CLDIR="$1"
 if [ ! -z "$CLDIR" ]; then 
@@ -74,7 +74,7 @@ cd realsense
 git checkout 2.0.3
 cd ../..
 echo "Making Intel ROS realsense"
-sudo rosdep -y install --from-paths src --ignore-src --rosdistro kinetic
+sudo rosdep -y install --from-paths src --ignore-src --rosdistro melodic
 if [ -e "$CATKIN_WORKSPACEHIDDEN" ] ; then
 	catkin_make
 	echo "RealSense 2 ROS Package installed"
